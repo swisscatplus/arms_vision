@@ -1,0 +1,61 @@
+{
+ "created_at": "2026-09-10T18:52:32",
+ "resumed_at": null,
+ "n_trials": 40,
+ "depths_mm": [
+  8.0,
+  7.0,
+  6.0,
+  5.0,
+  3.0,
+  0.5,
+  -4.0,
+  -15.0
+ ],
+ "repeats": 5,
+ "order": "randomized",
+ "seed": 0,
+ "prompts": [
+  "scoop",
+  "white material on the scoop"
+ ],
+ "thresholds": [
+  0.4,
+  0.4
+ ],
+ "edge_fit": "ransac",
+ "ransac_tol_mm": 0.75,
+ "surface_height_limit_mm": 60.0,
+ "vial_clicks_px": [
+  [
+   1649,
+   311
+  ],
+  [
+   448,
+   600
+  ]
+ ],
+ "vial_length_mm": 57.0,
+ "mm_per_px": 0.046143304034026916,
+ "prompt_clicks_px": {
+  "positive": [
+   [
+    638,
+    718
+   ]
+  ],
+  "negative": [
+   [
+    1198,
+    272
+   ]
+  ]
+ },
+ "prompt_fraction_from_click0": {
+  "positive": 0.873,
+  "negative": 0.348
+ },
+ "deposit": "tapped_deposit",
+ "scoop": "tp_gmm"
+}

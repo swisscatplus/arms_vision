@@ -1,0 +1,74 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below (preferred-citation)."
+title: "Quantitative Vision for Solid Sampling at the Milligram Scale: code"
+type: software
+authors:
+  - family-names: Hermus
+    given-names: James
+    affiliation: "Idiap Research Institute, Martigny, Switzerland"
+  - family-names: Tan
+    given-names: Jasper
+    affiliation: "Swiss Cat+ West Hub, École Polytechnique Fédérale de Lausanne (EPFL), Lausanne, Switzerland"
+  - family-names: Calinon
+    given-names: Sylvain
+    affiliation: "Idiap Research Institute, Martigny, Switzerland"
+  - family-names: Miéville
+    given-names: Pascal
+    affiliation: "Swiss Cat+ West Hub, École Polytechnique Fédérale de Lausanne (EPFL), Lausanne, Switzerland"
+  - family-names: Senft
+    given-names: Emmanuel
+    affiliation: "Idiap Research Institute, Martigny, Switzerland"
+repository-code: "https://github.com/swisscatplus/arms_vision"
+# To add on publication:
+# date-released: "2026-MM-DD"
+# version: "1.0.0"
+keywords:
+  - robotic solid sampling
+  - surface estimation
+  - laboratory automation
+  - promptable segmentation
+  - mass estimation
+  - learning from demonstration
+references:
+  - type: data
+    title: "Quantitative Vision for Solid Sampling at the Milligram Scale: run logs and trial-level data"
+    authors:
+      - family-names: Hermus
+        given-names: James
+      - family-names: Tan
+        given-names: Jasper
+      - family-names: Calinon
+        given-names: Sylvain
+      - family-names: Miéville
+        given-names: Pascal
+      - family-names: Senft
+        given-names: Emmanuel
+    publisher:
+      name: Zenodo
+    year: 2026
+    # doi: "10.5281/zenodo.<record>"   (add when the record is published)
+  - type: software
+    title: "arms_tplqt: task-parameterised linear quadratic tracking"
+    notes: "Code of the task-parameterized sampling action, and in data/salt_scoop/ the nineteen human demonstrations of sodium chloride scooping that trained it."
+    authors:
+      - family-names: Tan
+        given-names: Jasper
+    repository-code: "https://github.com/swisscatplus/arms_tplqt"
+    license: MIT
+preferred-citation:
+  type: article
+  title: "Quantitative Vision for Solid Sampling at the Milligram Scale"
+  authors:
+    - family-names: Hermus
+      given-names: James
+    - family-names: Tan
+      given-names: Jasper
+    - family-names: Calinon
+      given-names: Sylvain
+    - family-names: Miéville
+      given-names: Pascal
+    - family-names: Senft
+      given-names: Emmanuel
+  journal: "Advanced Robotics Research"
+  status: submitted
+  year: 2026

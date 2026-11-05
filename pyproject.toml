@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ssvision"
+version = "1.0.0"
+description = "Surface and mass estimation from camera images for robotic solid sampling (Hermus et al., 2026)"
+readme = "README.md"
+requires-python = ">=3.10"
+# Names only: an author given with an email is listed under Author-email, not Author, so the contact is the maintainer.
+authors = [
+    { name = "James Hermus" },
+    { name = "Jasper Tan" },
+    { name = "Sylvain Calinon" },
+    { name = "Pascal Miéville" },
+    { name = "Emmanuel Senft" },
+]
+maintainers = [{ name = "James Hermus", email = "james.hermus@idiap.ch" }]
+keywords = ["robotic solid sampling", "laboratory automation", "promptable segmentation", "mass estimation"]
+# The package itself needs numpy and OpenCV; the demo also draws with matplotlib and reads images with Pillow.
+# requirements.txt pins the versions the paper's numbers were computed with.
+dependencies = ["numpy", "opencv-python", "pillow", "matplotlib"]
+
+[project.optional-dependencies]
+paper = ["scipy", "zarr>=2.18,<3"]                # paper/analysis: statistics, and the run logs (zarr format 2)
+# ssvision.segment and ssvision.sam3_pipeline; tested with torch 2.11.0, torchvision 0.26.0, transformers 5.18.0
+# (the image processor of SAM 3 needs torchvision)
+sam3 = ["torch", "torchvision", "transformers>=5.18"]
+test = ["pytest"]
+
+[project.urls]
+Repository = "https://github.com/swisscatplus/arms_vision"
+
+[tool.setuptools]
+packages = ["ssvision"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+# pyflakes and the pycodestyle errors. The scripts keep short statements on one line (E702), and two figure scripts
+# set matplotlib's font size before their other imports (E402).
+select = ["E4", "E7", "E9", "F"]
+ignore = ["E702", "E402"]

@@ -1,0 +1,38 @@
+# On every push and pull request: install the pinned environment and the package, then run the tests. They run the
+# demo (each value against demo/expected/) and paper/reproduce.py (every number of the paper against
+# paper/expected/make_all.txt, and the figures that need only the trial-level data). The run logs of the Zenodo
+# record are not downloaded here. A second job runs the checks of .pre-commit-config.yaml (ruff and file checks).
+name: check
+
+on: [push, pull_request]
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - name: OpenCV system library
+        run: sudo apt-get update && sudo apt-get install -y libgl1
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install -e ".[test]"
+      - name: Demo
+        run: python demo/demo.py
+      - name: Tests (demo, package, paper/reproduce.py)
+        run: pytest -v
+
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - name: pre-commit (ruff and file checks)
+        run: |
+          pip install pre-commit==4.6.2
+          pre-commit run --all-files --show-diff-on-failure

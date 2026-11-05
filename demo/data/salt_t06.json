@@ -1,0 +1,161 @@
+{
+ "material": "salt",
+ "trial": 6,
+ "run": {
+  "zarr": "benchmark_2026-09-10-18-52.zarr",
+  "created_at": "2026-09-10T18:52:32"
+ },
+ "commanded_offset_sz_mm": 5.0,
+ "balance": {
+  "carried_mg": 8.796875,
+  "delivered_mg": 8.778666496276855,
+  "note": "carried = source vial before - after (differential weighing); paper/data/<material>_trials.csv"
+ },
+ "files": {
+  "side": {
+   "file": "salt_t06_side.png",
+   "sha256": "d7679daf3b83e9a58d7d0d1d58be3896dbfa5b2e656c02076f85aa22af64ad15",
+   "origin_px": [
+    320,
+    170
+   ],
+   "size_px": [
+    1100,
+    760
+   ]
+  },
+  "side_mask": {
+   "file": "salt_t06_side_mask.png",
+   "sha256": "91df210ca4d1cfb71339b28dc1783f4f7727e335bb75b5ae0a6e0b91ee10cfee",
+   "origin_px": [
+    320,
+    170
+   ],
+   "size_px": [
+    1100,
+    760
+   ]
+  },
+  "top": {
+   "file": "salt_t06_top.png",
+   "sha256": "ca27ce01734882e4f7477015aa072b04c246ba798a59741db46be8103a9c5190",
+   "origin_px": [
+    240,
+    380
+   ],
+   "size_px": [
+    520,
+    340
+   ]
+  },
+  "top_mask": {
+   "file": "salt_t06_top_mask.png",
+   "sha256": "fe9c734c01cc7e50638f6b47a40fe42c40497cdd39f5fd23ef2038014012d12b",
+   "origin_px": [
+    240,
+    380
+   ],
+   "size_px": [
+    520,
+    340
+   ]
+  }
+ },
+ "files_note": "crops of the camera frames: origin_px is the crop's top-left pixel in the full frame, which every pixel coordinate below refers to",
+ "full_frames": {
+  "size_px": [
+   1936,
+   1216
+  ],
+  "side": {
+   "file": "full/salt_t06_side.png",
+   "sha256": "4715acd7dc42ef58ee989dda54e44619fcb310a23cab08a45473f64dac1c5970"
+  },
+  "side_mask": {
+   "file": "full/salt_t06_side_mask.png",
+   "sha256": "84744331bc51e6c260d415f1bd1d668542568f7eb8fd98f44e7f2d7fa6c8123f"
+  },
+  "top": {
+   "file": "full/salt_t06_top.png",
+   "sha256": "9161e96a14b1d38835febe5b486d3021be0f203f4d0ebe1f8d006dbffa9d1a19"
+  },
+  "top_mask": {
+   "file": "full/salt_t06_top_mask.png",
+   "sha256": "1ffb97747cbb87b5e1227991d0f44c553c9316c8a1289984283b6dae9fba6bee"
+  },
+  "note": "the uncropped frames, for --sam3: in the Zenodo record (python scripts/download_data.py demo)"
+ },
+ "channel_order_in_zarr": {
+  "side": "BGR",
+  "top": "RGB",
+  "png": "RGB (both)"
+ },
+ "surface_stored": {
+  "vial_clicks_image_px": [
+   [
+    1649.0,
+    311.0
+   ],
+   [
+    448.0,
+    600.0
+   ]
+  ],
+  "vial_clicks_note": "two fixed reference pixels on the vial axis, click 0 at the lip end",
+  "vial_length_mm": 57.0,
+  "material_click_px": [
+   [
+    638,
+    718
+   ]
+  ],
+  "negative_click_px": [
+   [
+    1198,
+    272
+   ]
+  ],
+  "edge_fit": "ransac",
+  "ransac_tol_mm": 0.75,
+  "T_vialLip_surface_pose7": [
+   0.0,
+   0.0,
+   -0.03269333019852638,
+   -0.38335952162742615,
+   0.0,
+   0.0,
+   0.9235991835594177
+  ],
+  "pose7_note": "[x, y, z, qx, qy, qz, qw] of the surface frame in the vial-lip frame, metres, float32 in the zarr",
+  "surface_z_lip_mm": -32.69333019852638,
+  "tilt_about_x_lip_deg": -45.08387070858468,
+  "plane_center_image_px": [
+   960.1458129882812,
+   476.76092529296875
+  ],
+  "mask_area_px": 247572
+ },
+ "mass_stored": {
+  "observation_index": 2,
+  "pixel_count": 3894,
+  "success": true,
+  "notes": "sam3+power_law: class=grainy",
+  "csv_px_obs2": 3894,
+  "prompts": [
+   "scoop",
+   "white material on the scoop"
+  ],
+  "confidence_thresholds": [
+   0.4,
+   0.4
+  ],
+  "paddings_px": [
+   0,
+   0
+  ],
+  "single_detection_only": [
+   true,
+   true
+  ]
+ }
+}

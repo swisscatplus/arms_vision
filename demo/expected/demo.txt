@@ -1,0 +1,10 @@
+NaCl, trial 6 (s_z = +5.0 mm)
+  surface  32.69 mm below the lip (21.31 mm above the vial floor), tilt -45.08 deg
+  mass     3894 px -> 8.96 mg (a = 2.1590e-04, b = 1.2863); the balance measured 8.80 mg
+Sugar, trial 4 (s_z = +3.0 mm)
+  surface  34.83 mm below the lip (19.17 mm above the vial floor), tilt -41.08 deg
+  mass     4770 px -> 9.83 mg (a = 2.0605e-04, b = 1.2719); the balance measured 9.92 mg
+Polenta, trial 40 (s_z = +3.0 mm)
+  surface  35.30 mm below the lip (18.70 mm above the vial floor), tilt -36.20 deg
+  mass     4656 px -> 8.34 mg (a = 8.7772e-05, b = 1.3571); the balance measured 9.45 mg
+wrote demo/out/demo.png: top row, the side view with the mask (blue), its upper boundary (red: RANSAC inliers), the fitted surface line, the vial axis (dashed) and the point p where they cross; bottom row, the top view with the mask (red)

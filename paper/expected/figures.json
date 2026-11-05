@@ -1,0 +1,75 @@
+{
+ "note": "SHA-256 of the decoded pixels (mode, size, raw bytes) of each figure's PNG as made for the paper. The script writes the PNG and the PDF together; where the paper includes the PDF, the PNG is compared.",
+ "fig_materials_faded.png": {
+  "figure": "Figure 1 (fig:materials)",
+  "paper_includes": "fig_materials_faded.png",
+  "size_px": [
+   2160,
+   672
+  ],
+  "pixels_sha256": "4716dd3b08048229aeadfe079575b404f1b7e81260ad106137c1316a109a2964"
+ },
+ "fig_cameras_compact.png": {
+  "figure": "Figure 2 (fig:platform)",
+  "paper_includes": "fig_cameras_compact.pdf",
+  "size_px": [
+   3868,
+   1700
+  ],
+  "pixels_sha256": "2d70c35e2f0ba25839c0f1a7112efaa56e54b4d7a5bbcd1d9f09991bd7b38ee5"
+ },
+ "fig_cycle.png": {
+  "figure": "Figure 3 (fig:cycle)",
+  "paper_includes": "fig_cycle.pdf",
+  "size_px": [
+   3868,
+   2012
+  ],
+  "pixels_sha256": "036aae2962f7d87c91eccda53917fe4f5b79f4c76e653bbe5b3425020682c3a2"
+ },
+ "fig_tp_scoop.png": {
+  "figure": "Figure 4 (fig:tp_scoop)",
+  "paper_includes": "fig_tp_scoop.pdf",
+  "size_px": [
+   1934,
+   930
+  ],
+  "pixels_sha256": "616c570a9abfd3fd0650b7ddec7505dea26c0e160e044e857ed46b1e5b3fed8e"
+ },
+ "fig3_examples.png": {
+  "figure": "Figure 5 (fig:examples)",
+  "paper_includes": "fig3_examples.png",
+  "size_px": [
+   1565,
+   751
+  ],
+  "pixels_sha256": "4c9297faeb0c3e77890d49435a8b5daf7eb54c5e1b3b393d9d0b7c1689c13c31"
+ },
+ "fig2_benchmark_linear_floor.png": {
+  "figure": "Figure 6 (fig:benchmark)",
+  "paper_includes": "fig2_benchmark_linear_floor.pdf",
+  "size_px": [
+   1609,
+   707
+  ],
+  "pixels_sha256": "acf0c1396bf8fd2878416ef72fcf43ad765564209ec7e97389ad4e0757ee44ac"
+ },
+ "fig_surface_height.png": {
+  "figure": "Figure 7 (fig:surface_height)",
+  "paper_includes": "fig_surface_height.pdf",
+  "size_px": [
+   1054,
+   904
+  ],
+  "pixels_sha256": "d0f0933ec54873b0b3a3e0c98c98655c79276392c844b0d06a49935f2ea38c34"
+ },
+ "fig_deposit_linear.png": {
+  "figure": "Figure 8 (fig:deposit)",
+  "paper_includes": "fig_deposit_linear.pdf",
+  "size_px": [
+   1054,
+   904
+  ],
+  "pixels_sha256": "f632d5b6b64b2c812dc1d0460a47b8b3759c0ae71d1c90ffed5e86f4bc522a15"
+ }
+}

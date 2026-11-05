@@ -1,0 +1,365 @@
+
+==============================================================================
+extract_runs.py
+==============================================================================
+salt      40 trials -> salt_trials.csv  (created 2026-09-10T18:52:32, resumed None, prompts ['scoop', 'white material on the scoop'], thr [0.4, 0.4], NaN carried: 0)
+sugar     40 trials -> sugar_trials.csv  (created 2026-09-10T13:46:22, resumed None, prompts ['scoop', 'white material on the scoop'], thr [0.4, 0.4], NaN carried: 0)
+polenta   40 trials -> polenta_trials.csv  (created 2026-09-11T09:08:09, resumed None, prompts ['scoop', 'yellow material on the scoop'], thr [0.4, 0.4], NaN carried: 0)
+
+==============================================================================
+table1_depth_mass.py
+==============================================================================
+
+=== Table I: NaCl (n=40 trials, 2 surface failures excluded) ===
+ sz(mm)    N carried mean     SD    CV% | delivered mean     SD
+    8.0    5         1.00   0.75   74.8 |           0.68   0.55
+    7.0    5         2.35   0.39   16.7 |           1.98   0.15
+    6.0    4         5.18   0.61   11.7 |           4.61   1.01   (1 surface-failure trial excluded)
+    5.0    5         6.82   1.87   27.5 |           6.41   1.87
+    3.0    5        13.65   0.57    4.2 |          13.13   0.75
+    0.5    5        25.74   2.10    8.2 |          24.48   2.24
+   -4.0    4        44.06   0.81    1.8 |          42.20   0.72   (1 surface-failure trial excluded)
+  -15.0    5        89.99   1.38    1.5 |          84.20   1.64
+--- LaTeX rows (sz, N, carried mean, SD, CV) ---
+        +8.0 & 5 & 1.00 & 0.75 & 74.8 \\
+        +7.0 & 5 & 2.35 & 0.39 & 16.7 \\
+        +6.0 & 4 & 5.18 & 0.61 & 11.7 \\
+        +5.0 & 5 & 6.82 & 1.87 & 27.5 \\
+        +3.0 & 5 & 13.65 & 0.57 & 4.2 \\
+        +0.5 & 5 & 25.74 & 2.10 & 8.2 \\
+        -4.0 & 4 & 44.06 & 0.81 & 1.8 \\
+        -15.0 & 5 & 89.99 & 1.38 & 1.5 \\
+Spearman rho (depth into material vs carried mass) = 0.984 (p = 1.2e-28, n = 38)
+Pooled within-depth SD (RMS) = 1.22 mg; SD range 0.39-2.10 mg
+Largest mean (blade capacity proxy): 90.0 mg at sz = -15.0 mm (CV 1.5 %)
+Empty scoops (carried < 0.15 mg, kept in the statistics above): 1 of 38 (+8.0 mm: 1 of 5); carried +0.105 to +0.105 mg
+  surface failure: trial 14, surface z = -21.6 mm vs run median -33.0 mm, carried 0.02 mg
+  surface failure: trial 36, surface z = -11.7 mm vs run median -33.0 mm, carried 0.03 mg
+  SD at sz = +6.0 with the failure included: 2.37 mg (excluded: 0.61 mg)
+  SD at sz = -4.0 with the failure included: 19.70 mg (excluded: 0.81 mg)
+Surface estimate over the run: drift -39 um/trial, residual SD about the trend 0.18 mm, max |resid| 0.63 mm (n=38); run median height -33.1 mm below the lip
+Transfer loss (carried - delivered): median 0.65 mg, max 7.62 mg at sz = -15.0 mm; deepest row loss mean 5.79 mg
+Deposit (differential weighing, 37 scoops that were not empty): delivered/carried median 93.9 %, IQR 87.5-98.2 %, min 15.1 %
+  loss vs carried (fig:deposit): median loss 0.66 mg; negative losses: 2
+    sz=+8.0: delivered/carried mean 64.0 % (n=4)
+    sz=+7.0: delivered/carried mean 85.6 % (n=5)
+    sz=+6.0: delivered/carried mean 88.1 % (n=4)
+    sz=+5.0: delivered/carried mean 94.0 % (n=5)
+    sz=+3.0: delivered/carried mean 96.2 % (n=5)
+    sz=+0.5: delivered/carried mean 95.2 % (n=5)
+    sz=-4.0: delivered/carried mean 95.8 % (n=4)
+    sz=-15.0: delivered/carried mean 93.6 % (n=5)
+Near-empty delivered readings: +0.04 to +0.24 mg (n=4) -> balance-cycle repeatability
+
+=== Table I: Sugar (n=40 trials, 0 surface failures excluded) ===
+ sz(mm)    N carried mean     SD    CV% | delivered mean     SD
+    8.0    5         0.04   0.04  114.9 |           0.03   0.04
+    7.0    5         0.25   0.24   95.9 |           0.13   0.20
+    6.0    5         1.86   0.70   37.7 |           1.20   0.72
+    5.0    5         3.29   1.72   52.3 |           3.10   1.50
+    3.0    5         9.61   1.32   13.7 |           9.29   1.09
+    0.5    5        16.79   0.67    4.0 |          15.96   1.81
+   -4.0    5        30.89   1.62    5.2 |          28.55   1.98
+  -15.0    5        71.24   2.82    4.0 |          65.08   0.90
+--- LaTeX rows (sz, N, carried mean, SD, CV) ---
+        +8.0 & 5 & 0.04 & 0.04 & 114.9 \\
+        +7.0 & 5 & 0.25 & 0.24 & 95.9 \\
+        +6.0 & 5 & 1.86 & 0.70 & 37.7 \\
+        +5.0 & 5 & 3.29 & 1.72 & 52.3 \\
+        +3.0 & 5 & 9.61 & 1.32 & 13.7 \\
+        +0.5 & 5 & 16.79 & 0.67 & 4.0 \\
+        -4.0 & 5 & 30.89 & 1.62 & 5.2 \\
+        -15.0 & 5 & 71.24 & 2.82 & 4.0 \\
+Spearman rho (depth into material vs carried mass) = 0.985 (p = 1.4e-30, n = 40)
+Pooled within-depth SD (RMS) = 1.43 mg; SD range 0.04-2.82 mg
+Largest mean (blade capacity proxy): 71.2 mg at sz = -15.0 mm (CV 4.0 %)
+Empty scoops (carried < 0.15 mg, kept in the statistics above): 8 of 40 (+8.0 mm: 5 of 5, +7.0 mm: 3 of 5); carried -0.016 to +0.105 mg
+Surface estimate over the run: drift -54 um/trial, residual SD about the trend 0.16 mm, max |resid| 0.39 mm (n=40); run median height -35.6 mm below the lip
+Transfer loss (carried - delivered): median 0.18 mg, max 10.12 mg at sz = -15.0 mm; deepest row loss mean 6.16 mg
+Deposit (differential weighing, 32 scoops that were not empty): delivered/carried median 93.2 %, IQR 87.5-98.2 %, min -6.2 %
+  loss vs carried (fig:deposit): median loss 0.60 mg; negative losses: 2
+    sz=+7.0: delivered/carried mean 70.0 % (n=2)
+    sz=+6.0: delivered/carried mean 59.1 % (n=5)
+    sz=+5.0: delivered/carried mean 95.7 % (n=5)
+    sz=+3.0: delivered/carried mean 96.9 % (n=5)
+    sz=+0.5: delivered/carried mean 94.9 % (n=5)
+    sz=-4.0: delivered/carried mean 92.4 % (n=5)
+    sz=-15.0: delivered/carried mean 91.4 % (n=5)
+Near-empty delivered readings: -0.05 to +0.44 mg (n=11) -> balance-cycle repeatability
+
+=== Table I: Polenta (n=40 trials, 0 surface failures excluded) ===
+ sz(mm)    N carried mean     SD    CV% | delivered mean     SD
+    8.0    5         0.82   1.57  193.1 |           0.60   1.19
+    7.0    5         0.30   0.21   70.7 |           0.27   0.21
+    6.0    5         1.31   0.20   14.9 |           1.27   0.29
+    5.0    5         2.71   0.94   34.7 |           2.71   0.98
+    3.0    5         9.41   0.94   10.0 |           9.22   0.67
+    0.5    5        18.22   3.46   19.0 |          18.15   3.44
+   -4.0    5        32.80   4.13   12.6 |          32.20   3.74
+  -15.0    5        70.32   6.21    8.8 |          65.77   6.50
+--- LaTeX rows (sz, N, carried mean, SD, CV) ---
+        +8.0 & 5 & 0.82 & 1.57 & 193.1 \\
+        +7.0 & 5 & 0.30 & 0.21 & 70.7 \\
+        +6.0 & 5 & 1.31 & 0.20 & 14.9 \\
+        +5.0 & 5 & 2.71 & 0.94 & 34.7 \\
+        +3.0 & 5 & 9.41 & 0.94 & 10.0 \\
+        +0.5 & 5 & 18.22 & 3.46 & 19.0 \\
+        -4.0 & 5 & 32.80 & 4.13 & 12.6 \\
+        -15.0 & 5 & 70.32 & 6.21 & 8.8 \\
+Spearman rho (depth into material vs carried mass) = 0.964 (p = 1.7e-23, n = 40)
+Pooled within-depth SD (RMS) = 3.00 mg; SD range 0.20-6.21 mg
+Largest mean (blade capacity proxy): 70.3 mg at sz = -15.0 mm (CV 8.8 %)
+Empty scoops (carried < 0.15 mg, kept in the statistics above): 5 of 40 (+8.0 mm: 3 of 5, +7.0 mm: 2 of 5); carried +0.047 to +0.102 mg
+Surface estimate over the run: drift -33 um/trial, residual SD about the trend 0.16 mm, max |resid| 0.60 mm (n=40); run median height -34.4 mm below the lip
+Transfer loss (carried - delivered): median 0.07 mg, max 5.28 mg at sz = -15.0 mm; deepest row loss mean 4.54 mg
+Deposit (differential weighing, 35 scoops that were not empty): delivered/carried median 98.2 %, IQR 93.8-99.6 %, min 25.1 %
+  loss vs carried (fig:deposit): median loss 0.11 mg; negative losses: 5
+    sz=+8.0: delivered/carried mean 50.1 % (n=2)
+    sz=+7.0: delivered/carried mean 96.9 % (n=3)
+    sz=+6.0: delivered/carried mean 95.7 % (n=5)
+    sz=+5.0: delivered/carried mean 99.4 % (n=5)
+    sz=+3.0: delivered/carried mean 98.2 % (n=5)
+    sz=+0.5: delivered/carried mean 99.6 % (n=5)
+    sz=-4.0: delivered/carried mean 98.3 % (n=5)
+    sz=-15.0: delivered/carried mean 93.5 % (n=5)
+Near-empty delivered readings: +0.02 to +0.37 mg (n=8) -> balance-cycle repeatability
+
+=== Surface estimate vs its run median, NaCl, Sugar, Polenta ===
+surface failures: NaCl trial 14: 11.46, NaCl trial 36: 21.32 mm from the run median
+largest deviation of any other trial: 1.34 mm (Sugar); per material NaCl 1.25, Sugar 1.34, Polenta 0.87 mm
+
+=== Deposit loss (fig:deposit), NaCl, Sugar, Polenta: 104 trials ===
+negative losses (delivered > carried): 9 (NaCl 2, Sugar 2, Polenta 5); -0.108 to -0.001 mg
+delivered more than half of the carried mass: 100/104; exceptions (material, carried mg, delivered %): [('NaCl', 0.88, 15.1), ('Sugar', 2.7, 48.9), ('Sugar', 0.84, -6.2), ('Polenta', 0.25, 25.1)]
+scoops of up to 10 mg: 52 trials; loss median 0.13 mg, max 1.60 mg; below 1 mg: 50/52
+mass lost per material (median, 90th percentile), scoops of up to 10 mg | above 10 mg:
+  NaCl     n = 18: 0.34, 0.90 mg | n = 19: 1.23, 5.66 mg (5.2, 7.7 % of the carried mass)
+  Sugar    n = 15: 0.17, 0.83 mg | n = 17: 2.01, 5.60 mg (6.3, 13.5 % of the carried mass)
+  Polenta  n = 19: 0.04, 0.19 mg | n = 16: 0.77, 4.81 mg (2.5, 7.1 % of the carried mass)
+
+==============================================================================
+table3_vision_fit.py
+==============================================================================
+
+=== Table III: NaCl ===
+fit m = a px^b vs CARRIED mass: a = 2.159e-04, b = 1.286, R2 = 0.974, n = 37 of 37 (range 0.67-91.4 mg)
+abs error: in-sample median 0.96 mg; LOO median 1.00, mean 1.81, max 5.85 mg; LOO relative median 10.4 %, 90th pct 25 %
+ sz(mm)   Ndet   scale  vision     SD    MAE
+    8.0 4/4       1.22    1.40   1.04   0.45
+    7.0 5/5       2.35    2.75   0.63   0.43
+    6.0 4/4       5.18    5.99   0.69   0.86
+    5.0 5/5       6.82    7.47   1.83   0.67
+    3.0 5/5      13.65   13.43   0.77   0.54
+    0.5 5/5      25.74   22.44   2.95   3.40
+   -4.0 4/4      44.06   38.83   0.81   5.49
+  -15.0 5/5      89.99   87.87   2.87   2.90
+--- LaTeX rows (sz, Ndet, scale, vision, SD, MAE) ---
+        +8.0 & 4/4 & 1.22 & 1.40 & 1.04 & 0.45 \\
+        +7.0 & 5/5 & 2.35 & 2.75 & 0.63 & 0.43 \\
+        +6.0 & 4/4 & 5.18 & 5.99 & 0.69 & 0.86 \\
+        +5.0 & 5/5 & 6.82 & 7.47 & 1.83 & 0.67 \\
+        +3.0 & 5/5 & 13.65 & 13.43 & 0.77 & 0.54 \\
+        +0.5 & 5/5 & 25.74 & 22.44 & 2.95 & 3.40 \\
+        -4.0 & 4/4 & 44.06 & 38.83 & 0.81 & 5.49 \\
+        -15.0 & 5/5 & 89.99 & 87.87 & 2.87 & 2.90 \\
+Loaded-blade detection: 37/37; empty scoops (< 0.15 mg) excluded: 1
+Non-detections (0 px on a loaded scoop): 0 []
+Mis-segmentations (LOO err > 50 % AND > 1.0 mg): 0 []
+  worst relative LOO errors: trial 26: 0.67 mg carried, 0.18 predicted (74 %); trial 9: 1.22 mg carried, 2.09 predicted (72 %); trial 31: 4.70 mg carried, 6.09 predicted (30 %)
+Repeatability of the two loaded-blade reads: median -0.4 %, IQR -1.1..+0.6 %, max |.| 21.8 %
+After-deposit reads with a non-empty mask: 0 of 40
+
+=== Table III: Sugar ===
+fit m = a px^b vs CARRIED mass: a = 2.061e-04, b = 1.272, R2 = 0.994, n = 30 of 32 (range 0.84-76.2 mg)
+abs error: in-sample median 0.60 mg; LOO median 0.65, mean 1.27, max 6.64 mg; LOO relative median 6.3 %, 90th pct 17 %
+ sz(mm)   Ndet   scale  vision     SD    MAE
+    8.0 0/0        ---     ---    ---    ---
+    7.0 0/2       0.49     ---    ---    ---
+    6.0 5/5       1.86    2.14   0.97   0.36
+    5.0 5/5       3.29    3.04   1.48   0.27
+    3.0 5/5       9.61    9.66   1.00   0.49
+    0.5 5/5      16.79   16.42   1.44   1.14
+   -4.0 5/5      30.89   29.31   1.38   1.99
+  -15.0 5/5      71.24   74.01   2.51   3.36
+--- LaTeX rows (sz, Ndet, scale, vision, SD, MAE) ---
+        +8.0 & 0/0 & --- & --- & --- & --- \\
+        +7.0 & 0/2 & 0.49 & --- & --- & --- \\
+        +6.0 & 5/5 & 1.86 & 2.14 & 0.97 & 0.36 \\
+        +5.0 & 5/5 & 3.29 & 3.04 & 1.48 & 0.27 \\
+        +3.0 & 5/5 & 9.61 & 9.66 & 1.00 & 0.49 \\
+        +0.5 & 5/5 & 16.79 & 16.42 & 1.44 & 1.14 \\
+        -4.0 & 5/5 & 30.89 & 29.31 & 1.38 & 1.99 \\
+        -15.0 & 5/5 & 71.24 & 74.01 & 2.51 & 3.36 \\
+Loaded-blade detection: 30/32; empty scoops (< 0.15 mg) excluded: 8
+Non-detections (0 px on a loaded scoop): 2 [(11, 0.61328125), (21, 0.359375)]
+Mis-segmentations (LOO err > 50 % AND > 1.0 mg): 0 []
+  worst relative LOO errors: trial 14: 2.70 mg carried, 3.38 predicted (25 %); trial 13: 2.20 mg carried, 2.74 predicted (25 %); trial 3: 1.56 mg carried, 1.86 predicted (19 %)
+Repeatability of the two loaded-blade reads: median -0.9 %, IQR -1.7..-0.2 %, max |.| 5.0 %
+After-deposit reads with a non-empty mask: 0 of 40
+
+=== Table III: Polenta ===
+fit m = a px^b vs CARRIED mass: a = 8.777e-05, b = 1.357, R2 = 0.990, n = 33 of 35 (range 0.30-80.3 mg)
+abs error: in-sample median 0.49 mg; LOO median 0.51, mean 1.41, max 17.93 mg; LOO relative median 9.0 %, 90th pct 26 %
+ sz(mm)   Ndet   scale  vision     SD    MAE
+    8.0 1/2       1.94    4.91    ---   1.33
+    7.0 2/3       0.44    0.36   0.01   0.16
+    6.0 5/5       1.31    1.54   0.40   0.29
+    5.0 5/5       2.71    2.64   0.92   0.27
+    3.0 5/5       9.41    8.85   0.63   0.79
+    0.5 5/5      18.22   17.01   4.10   1.46
+   -4.0 5/5      32.80   31.66   2.93   1.33
+  -15.0 5/5      70.32   74.21   9.48   4.81
+--- LaTeX rows (sz, Ndet, scale, vision, SD, MAE) ---
+        +8.0 & 1/2 & 1.94 & 4.91 & --- & 1.33 \\
+        +7.0 & 2/3 & 0.44 & 0.36 & 0.01 & 0.16 \\
+        +6.0 & 5/5 & 1.31 & 1.54 & 0.40 & 0.29 \\
+        +5.0 & 5/5 & 2.71 & 2.64 & 0.92 & 0.27 \\
+        +3.0 & 5/5 & 9.41 & 8.85 & 0.63 & 0.79 \\
+        +0.5 & 5/5 & 18.22 & 17.01 & 4.10 & 1.46 \\
+        -4.0 & 5/5 & 32.80 & 31.66 & 2.93 & 1.33 \\
+        -15.0 & 5/5 & 70.32 & 74.21 & 9.48 & 4.81 \\
+Loaded-blade detection: 33/35; empty scoops (< 0.15 mg) excluded: 5
+Non-detections (0 px on a loaded scoop): 2 [(9, 0.25), (11, 0.44140625)]
+Mis-segmentations (LOO err > 50 % AND > 1.0 mg): 0 []
+  worst relative LOO errors: trial 31: 1.24 mg carried, 1.92 predicted (55 %); trial 12: 0.57 mg carried, 0.33 predicted (42 %); trial 1: 3.63 mg carried, 4.96 predicted (37 %)
+Repeatability of the two loaded-blade reads: median -0.2 %, IQR -1.2..+1.2 %, max |.| 12.3 %
+After-deposit reads with a non-empty mask: 0 of 40
+
+Basis of EMPTY_SCOOP_MG = 0.15 mg (NaCl, Sugar, Polenta):
+  most negative deposit loss -0.135 mg (NaCl -0.135, Sugar -0.104, Polenta -0.108); most negative carried mass -0.016 mg
+  empty scoops: n = 14 (NaCl 1, Sugar 8, Polenta 5), carried +0.068 +- 0.037 mg (mean +- SD), max 0.105 mg
+  gap: no scoop between 0.105 mg (largest empty scoop) and 0.250 mg (smallest loaded scoop), so any threshold in between gives the same empty scoops
+  vision on the empty scoops: 12 of 14 returned no mask; with a mask:
+    NaCl trial 38 at sz +8.0 mm: 125 px, vision 0.108 mg, balance 0.105 mg
+    Polenta trial 25 at sz +7.0 mm: 186 px, vision 0.106 mg, balance 0.102 mg
+  loaded scoops: 104, detected 100, non-detections 4 (carried 0.25-0.61 mg)
+Per-offset MAE (Table IV) over the reported materials: 0.16-5.49 mg
+LOO error on scoops of up to 10 mg (NaCl, Sugar, Polenta): n = 48, median 0.41 mg, max 1.39 mg
+Sugar vs NaCl: pixels for the same mass x1.12/1.14/1.16 at 2/10/50 mg; mass at the same pixel count x0.86/0.84/0.83 at 1k/5k/15k px
+Polenta vs NaCl: pixels for the same mass x1.34/1.26/1.18 at 2/10/50 mg; mass at the same pixel count x0.66/0.74/0.80 at 1k/5k/15k px
+
+--- LaTeX rows for tab:vision_fit (material, n, range mg, a, b, R2, LOO med, LOO max, LOO rel med %, 90th %) ---
+        NaCl & 37 & 0.7--91 & $2.16\times10^{-4}$ & 1.29 & 0.974 & 1.00 & 5.9 & 10 & 25 \\
+        Sugar & 30 & 0.8--76 & $2.06\times10^{-4}$ & 1.27 & 0.994 & 0.65 & 6.6 & 6 & 17 \\
+        Polenta & 33 & 0.3--80 & $8.78\times10^{-5}$ & 1.36 & 0.990 & 0.51 & 17.9 & 9 & 26 \\
+
+==============================================================================
+table2_merged.py
+==============================================================================
+--- LaTeX rows: sz, then per material (mean, SD, CV, Ndet, MAE) ---
+        $+8.0$ & 1.00 & 0.75 & 74.8 & 4/4 & 0.45 & 0.04 & 0.04 & 115 & --- & --- & 0.82 & 1.57 & 193 & 1/2 & 1.33 \\
+        $+7.0$ & 2.35 & 0.39 & 16.7 & 5/5 & 0.43 & 0.25 & 0.24 & 95.9 & 0/2 & --- & 0.30 & 0.21 & 70.7 & 2/3 & 0.16 \\
+        $+6.0$ & 5.18$^{\dagger}$ & 0.61 & 11.7 & 4/4 & 0.86 & 1.86 & 0.70 & 37.7 & 5/5 & 0.36 & 1.31 & 0.20 & 14.9 & 5/5 & 0.29 \\
+        $+5.0$ & 6.82 & 1.87 & 27.5 & 5/5 & 0.67 & 3.29 & 1.72 & 52.3 & 5/5 & 0.27 & 2.71 & 0.94 & 34.7 & 5/5 & 0.27 \\
+        $+3.0$ & 13.65 & 0.57 & 4.2 & 5/5 & 0.54 & 9.61 & 1.32 & 13.7 & 5/5 & 0.49 & 9.41 & 0.94 & 10.0 & 5/5 & 0.79 \\
+        $+0.5$ & 25.74 & 2.10 & 8.2 & 5/5 & 3.40 & 16.79 & 0.67 & 4.0 & 5/5 & 1.14 & 18.22 & 3.46 & 19.0 & 5/5 & 1.46 \\
+        $-4.0$ & 44.06$^{\dagger}$ & 0.81 & 1.8 & 4/4 & 5.49 & 30.89 & 1.62 & 5.2 & 5/5 & 1.99 & 32.80 & 4.13 & 12.6 & 5/5 & 1.33 \\
+        $-15.0$ & 89.99 & 1.38 & 1.5 & 5/5 & 2.90 & 71.24 & 2.82 & 4.0 & 5/5 & 3.36 & 70.32 & 6.21 & 8.8 & 5/5 & 4.81 \\
+
+==============================================================================
+table5_trials.py
+==============================================================================
+=== tab:trials: NaCl, Sugar, Polenta, total ===
+        \textbf{All trials} & 40 & 40 & 40 & 120 \\
+        \quad Surface-estimation failure & 2 & 0 & 0 & 2 \\
+        \midrule
+        \textbf{Valid surface estimate} & 38 & 40 & 40 & 118 \\
+        \quad Empty scoop ($<0.15$\,mg) & 1 & 8 & 5 & 14 \\
+        \midrule
+        \textbf{Scoop not empty} & 37 & 32 & 35 & 104 \\
+        \quad Mask returned & 37 & 30 & 33 & 100 \\
+        \qquad Mis-segmented & 0 & 0 & 0 & 0 \\
+        \quad No mask (non-detection) & 0 & 2 & 2 & 4 \\
+After-deposit images with a mask (all trials): 0 of 120 (NaCl 0, Sugar 0, Polenta 0)
+
+==============================================================================
+table4_cycletime.py
+==============================================================================
+
+=== Table IV: NaCl (n = 40 trials) ===
+  Weigh source vial (before) $\to$ trial-start image         2.5 $\pm$  0.3 s   (n=40)
+  Surface estimate (side image)                             10.6 $\pm$  0.2 s   (n=40)
+  Move to photo pose (before-scoop image)                    2.4 $\pm$  0.5 s   (n=40)
+  Scoop, return to photo pose (after-scoop image)           24.7 $\pm$  0.7 s   (n=40)
+  Vial exchange (before-deposit image)                      21.3 $\pm$  1.0 s   (n=40)
+  Deposit, return to photo pose (after-deposit image)       18.5 $\pm$  0.3 s   (n=40)
+  Weigh source vial (after)                                 55.1 $\pm$  0.5 s   (n=40)
+  Weigh goal vial                                           48.0 $\pm$  0.4 s   (n=40)
+  Within-trial span (first weigh -> last weigh)            183.0 $\pm$  2.2 s
+  Between trials (clean, restart, return, tare, fetch)     171.1 $\pm$  0.3 s
+  Trial period                                             354.2 $\pm$  2.3 s   (max 361)
+  Balance arcs: goal-vial weigh 48.0 s, source-vial weigh (after) 55.1 s; four balance visits per trial
+  T_v NOT SET (table4_cycletime.T_V_SEC) -- fill from the timed segmentation call before quoting a saving
+
+=== Table IV: Sugar (n = 40 trials) ===
+  Weigh source vial (before) $\to$ trial-start image         2.4 $\pm$  0.2 s   (n=40)
+  Surface estimate (side image)                             10.7 $\pm$  1.0 s   (n=40)
+  Move to photo pose (before-scoop image)                    2.3 $\pm$  0.2 s   (n=40)
+  Scoop, return to photo pose (after-scoop image)           24.9 $\pm$  0.8 s   (n=40)
+  Vial exchange (before-deposit image)                      21.0 $\pm$  0.7 s   (n=40)
+  Deposit, return to photo pose (after-deposit image)       18.5 $\pm$  0.5 s   (n=40)
+  Weigh source vial (after)                                 55.1 $\pm$  0.8 s   (n=40)
+  Weigh goal vial                                           47.8 $\pm$  0.2 s   (n=40)
+  Within-trial span (first weigh -> last weigh)            182.7 $\pm$  2.2 s
+  Between trials (clean, restart, return, tare, fetch)     171.4 $\pm$  1.7 s
+  Trial period                                             354.1 $\pm$  2.7 s   (max 363)
+  Balance arcs: goal-vial weigh 47.8 s, source-vial weigh (after) 55.1 s; four balance visits per trial
+  T_v NOT SET (table4_cycletime.T_V_SEC) -- fill from the timed segmentation call before quoting a saving
+
+=== Table IV: Polenta (n = 40 trials) ===
+  Weigh source vial (before) $\to$ trial-start image         3.2 $\pm$  1.5 s   (n=40)
+  Surface estimate (side image)                             12.1 $\pm$  1.5 s   (n=40)
+  Move to photo pose (before-scoop image)                    3.4 $\pm$  1.6 s   (n=40)
+  Scoop, return to photo pose (after-scoop image)           25.7 $\pm$  1.5 s   (n=40)
+  Vial exchange (before-deposit image)                      22.2 $\pm$  1.7 s   (n=40)
+  Deposit, return to photo pose (after-deposit image)       19.4 $\pm$  1.5 s   (n=40)
+  Weigh source vial (after)                                 55.1 $\pm$  0.8 s   (n=40)
+  Weigh goal vial                                           47.9 $\pm$  0.3 s   (n=40)
+  Within-trial span (first weigh -> last weigh)            189.1 $\pm$  5.9 s
+  Between trials (clean, restart, return, tare, fetch)     171.3 $\pm$  1.4 s
+  Trial period                                             360.2 $\pm$  5.8 s   (max 371)
+  Balance arcs: goal-vial weigh 47.9 s, source-vial weigh (after) 55.1 s; four balance visits per trial
+  T_v NOT SET (table4_cycletime.T_V_SEC) -- fill from the timed segmentation call before quoting a saving
+
+==============================================================================
+prompt_sweep_table.py
+==============================================================================
+=== Stage 0 (blade) ===
+  phrasings screened: 9
+  'scoop': RECOMMENDED -- 161-frame sweep; any threshold 0.25-0.6 gives 101/101, 0 false positives
+  'metal spatula': NOT SEPARABLE -- ranges overlap; at thr 0.10 gives 88/101 with 1 false positive
+
+=== Stage 1 (material) ===
+material     screened chosen prompt                     detected     R2  frames
+NaCl                8 'white material on the scoop'        36/36 0.9828      36   full re-segmentation from lossless zarr, balance-mass fit
+                      'crystals on the spatula'            31/36 0.9883   (original config: ORIGINAL CONFIG - 5 reads lost)
+Glass beads        27 'bubbles'                        6/6 real reads 0.9999      14   0 px on 4 real empty blades at thr 0.30; r2 UNRELIABLE - onl
+Polenta            16 'yellow material on the scoop'       16/16 0.9811      16   full re-segmentation from lossless zarr; 0 false positives o
+
+=== Confidence margins of the selected prompts on the pilot frames (quoted in sec:results_materials) ===
+  stage0_tool     NaCl     'scoop'                          min on loaded 0.61 (101 frames), max on empty 0.21 (60 frames), margin 0.40 -- 161-frame sweep; any threshold 0.25-0.6 gives 101/101, 0 false positives
+  stage1_material NaCl     'white material on the scoop'    min on loaded 0.83 (7 frames), max on empty 0.08 (2 frames), margin 0.75 -- scores from JPEG-compressed crops - PESSIMISTIC, rank-only
+  stage1_material polenta  'yellow material on the scoop'   min on loaded 0.57 (4 frames), max on empty 0.05 (2 frames), margin 0.52 -- lossless frames from zarr
+  stage1_material polenta  'white material on the scoop'    min on loaded 0.17 (4 frames), max on empty 0.09 (2 frames), margin 0.08 -- lossless frames from zarr
+
+LaTeX rows (material, phrasings screened, chosen prompt, validated detection):
+        NaCl & 8 & \texttt{"white material on the scoop"} & 36/36 \\
+        Glass beads & 27 & \texttt{"bubbles"} & 6/6 real reads \\
+        Polenta & 16 & \texttt{"yellow material on the scoop"} & 16/16 \\
+
+==============================================================================
+surface_compare.py
+==============================================================================
+=== Surface estimate vs force probe (NaCl): 5 levels x 3 blocks; 45 vision reads, 15 probes ===
+column convention height+|z|: vision 56.70 mm, probe 54.00 mm -> comparing in surface_z_mm
+fill range (vision): z -24.3 to -45.7 mm below lip = 32.4 to 11.0 mm above base
+vision repeatability, 3 reads without moving anything: SD median 0.08 mm, max 0.17 mm
+vision across the 3 rotations, per level: SD 0.03 to 0.14 mm
+tilt of the surface line in the image: 25 to 29 deg over all reads (mean 27.0)
+vision - probe: mean +0.80 mm, SD 0.61, range -0.00 to +1.81 mm
+  first probe of each level (full -> empty): [ 0.1  -0.    0.66  0.59  0.96] mm
+  probe resolution: values [np.float64(-46.5), np.float64(-44.5), np.float64(-43.5), np.float64(-38.5), np.float64(-33.5), np.float64(-31.5), np.float64(-24.5)] -> 1 mm steps
+  level 2: probe read [-31.5, -33.5, -33.5] (later probes 2 mm lower than the first); vision moved 0.28 mm
+  level 4: probe read [-43.5, -44.5, -44.5] (later probes 1 mm lower than the first); vision moved 0.07 mm
+time per estimate: vision median 3.1 s (range 2.3-6.9); probe 24 to 45 s, 1.0 s more per mm of fill removed; ratio 8 to 14x
+linear agreement: vision = 0.963 * probe + -0.56 mm, R^2 = 0.9955 (n = 15 blocks)

@@ -1,0 +1,24 @@
+
+NaCl, trial 6 (run benchmark_2026-09-10-18-52.zarr, s_z = +5.0 mm), stored SAM 3 mask
+  prompts           'scoop', then 'white material on the scoop', confidence [0.4, 0.4]
+  mask pixels n_px  3894 px          stored pixel count 3894 px   identical
+  power law (Eq. 1) m = a n_px^b, a = 2.1590e-04, b = 1.2863, R^2 = 0.974 (Table 4; fitted over the 37 NaCl scoops in data/calibration.csv)
+  vision estimate   8.96 mg
+  leave-one-out     8.97 mg (a = 2.1612e-04, b = 1.2862, fitted without this trial)
+  balance           8.80 mg carried (source vial before - after); vision - balance +0.17 mg
+
+Sugar, trial 4 (run benchmark_2026-09-10-13-46.zarr, s_z = +3.0 mm), stored SAM 3 mask
+  prompts           'scoop', then 'white material on the scoop', confidence [0.4, 0.4]
+  mask pixels n_px  4770 px          stored pixel count 4770 px   identical
+  power law (Eq. 1) m = a n_px^b, a = 2.0605e-04, b = 1.2719, R^2 = 0.994 (Table 4; fitted over the 30 Sugar scoops in data/calibration.csv)
+  vision estimate   9.83 mg
+  leave-one-out     9.83 mg (a = 2.0594e-04, b = 1.2719, fitted without this trial)
+  balance           9.92 mg carried (source vial before - after); vision - balance -0.09 mg
+
+Polenta, trial 40 (run benchmark_2026-09-11-09-08.zarr, s_z = +3.0 mm), stored SAM 3 mask
+  prompts           'scoop', then 'yellow material on the scoop', confidence [0.4, 0.4]
+  mask pixels n_px  4656 px          stored pixel count 4656 px   identical
+  power law (Eq. 1) m = a n_px^b, a = 8.7772e-05, b = 1.3571, R^2 = 0.990 (Table 4; fitted over the 33 Polenta scoops in data/calibration.csv)
+  vision estimate   8.34 mg
+  leave-one-out     8.31 mg (a = 8.7438e-05, b = 1.3571, fitted without this trial)
+  balance           9.45 mg carried (source vial before - after); vision - balance -1.10 mg

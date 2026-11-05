@@ -1,0 +1,31 @@
+{
+ "what": "pose of the spatula frame at one waypoint of the TP-scoop scoop path (fig:cycle retake)",
+ "t_s": 0.8,
+ "sample": 40,
+ "dt_s": 0.02,
+ "chosen": "nearest sample, in the y-z plane, to the blade tip of the current capture at (y, z) = [-3.96, -26.15] mm: 2.76 mm away",
+ "tip_vial_lip_mm": [
+  1.2121274294357443,
+  -1.2256828181755886,
+  -26.560330231911525
+ ],
+ "quat_vial_lip_xyzw": [
+  -0.009584341093029709,
+  0.7115353984757724,
+  0.7025034215803588,
+  0.010698588207094578
+ ],
+ "tool_axis_vial_lip": [
+  0.028670785560639664,
+  -0.012794166147402303,
+  -0.9995070261723671
+ ],
+ "tool_axis_vs_bore_deg": 1.7991501302410655,
+ "root_check_mm": 4.623091010163749e-06,
+ "resolve_vs_stored_mm": 4.998468871586503e-06,
+ "frame": "spatula tool frame (origin at the tip, +y tip -> handle) in vial_lip; command with coordinate_frame: vial_lip",
+ "path_file": "paper/data/fig_cycle/scoop_path_tpscoop_sz-4.json",
+ "model": "tp_scoop-0.1.0-py3-none-any.whl!tp_scoop/params/scoop_HS1.model.npz",
+ "model_sha256": "9975910ad47f28d7e9a14b7b43a78c8b1bf9e93f58ba6900c668161c1b5cdc70",
+ "repo_commit": "81ed22daa68c5df92bc20cce76e8cd28328bf8f9"
+}

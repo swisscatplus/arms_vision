@@ -1,0 +1,10 @@
+m = a n_px^b, fitted by least squares in log-log coordinates; leave-one-out errors (calibration.csv)
+NaCl     n = 37, 0.67-91.4 mg
+  a = 2.1590e-04, b = 1.2863, R^2 = 0.974
+  leave-one-out error: median 1.00 mg, mean 1.81 mg, max 5.9 mg; relative median 10 %, 90th percentile 25 %
+Sugar    n = 30, 0.84-76.2 mg
+  a = 2.0605e-04, b = 1.2719, R^2 = 0.994
+  leave-one-out error: median 0.65 mg, mean 1.27 mg, max 6.6 mg; relative median 6 %, 90th percentile 17 %
+Polenta  n = 33, 0.30-80.3 mg
+  a = 8.7772e-05, b = 1.3571, R^2 = 0.990
+  leave-one-out error: median 0.51 mg, mean 1.41 mg, max 17.9 mg; relative median 9 %, 90th percentile 26 %

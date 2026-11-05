@@ -1,0 +1,28 @@
+# demo/estimate_surface.py --sam3, run 2026-10-16 on Apple silicon (device mps), the masks processed as the service of the runs (ssvision.sam3_pipeline): torch 2.11.0, torchvision 0.26.0, transformers 5.18.0, facebook/sam3 revision 3c879f39826c281e95690f02c7821c4de09afae7 (local weights). A reference, not compared by the tests: SAM 3 is optional and its weights are gated.
+
+NaCl, trial 6 (run benchmark_2026-09-10-18-52.zarr, s_z = +5.0 mm), SAM 3 (local weights 3c879f39826c281e95690f02c7821c4de09afae7, best of 3 candidate masks by predicted IoU: 0.865*, 0.472, 0.703); 250854 px, IoU 0.9658 with the stored mask (247572 px)
+  scale             57.0 mm between the reference pixels (1649, 311) and (448, 600): 0.046143 mm/px; inlier band +-0.75 mm = +-16.25 px
+  upper boundary    40 of 40 bins kept; RANSAC inliers 32 of 40
+  surface point p   (960.423, 476.694) px     stored (960.146, 476.761) px
+  depth below lip   -32.68016 mm        stored -32.69333 mm    difference +1.3e-02 mm
+  tilt about x_lip  -45.06219 deg       stored -45.08387 deg   difference +2.2e-02 deg
+  height above the vial floor (54.0 mm below the lip, as in Figure 7): 21.32 mm
+  (SAM 3 mask recomputed here, so the result is compared with the stored one, not required to match it)
+
+Sugar, trial 4 (run benchmark_2026-09-10-13-46.zarr, s_z = +3.0 mm), SAM 3 (local weights 3c879f39826c281e95690f02c7821c4de09afae7, best of 3 candidate masks by predicted IoU: 0.563, 0.383, 0.808*); 256499 px, IoU 0.9901 with the stored mask (255986 px)
+  scale             57.0 mm between the reference pixels (1649, 311) and (448, 600): 0.046143 mm/px; inlier band +-0.75 mm = +-16.25 px
+  upper boundary    40 of 40 bins kept; RANSAC inliers 30 of 40
+  surface point p   (915.351, 487.540) px     stored (915.061, 487.610) px
+  depth below lip   -34.81930 mm        stored -34.83309 mm    difference +1.4e-02 mm
+  tilt about x_lip  -41.03175 deg       stored -41.07670 deg   difference +4.5e-02 deg
+  height above the vial floor (54.0 mm below the lip, as in Figure 7): 19.18 mm
+  (SAM 3 mask recomputed here, so the result is compared with the stored one, not required to match it)
+
+Polenta, trial 40 (run benchmark_2026-09-11-09-08.zarr, s_z = +3.0 mm), SAM 3 (local weights 3c879f39826c281e95690f02c7821c4de09afae7, best of 3 candidate masks by predicted IoU: 0.520, 0.289, 0.893*); 240601 px, IoU 0.9952 with the stored mask (241516 px)
+  scale             57.0 mm between the reference pixels (1649, 311) and (448, 600): 0.046143 mm/px; inlier band +-0.75 mm = +-16.25 px
+  upper boundary    40 of 40 bins kept; RANSAC inliers 27 of 40
+  surface point p   (905.277, 489.964) px     stored (905.222, 489.977) px
+  depth below lip   -35.29742 mm        stored -35.30005 mm    difference +2.6e-03 mm
+  tilt about x_lip  -35.93564 deg       stored -36.19526 deg   difference +2.6e-01 deg
+  height above the vial floor (54.0 mm below the lip, as in Figure 7): 18.70 mm
+  (SAM 3 mask recomputed here, so the result is compared with the stored one, not required to match it)

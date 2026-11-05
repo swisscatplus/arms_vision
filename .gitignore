@@ -1,0 +1,29 @@
+# written by the scripts
+demo/out/
+paper/output/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+
+# downloaded from the Zenodo record (python scripts/download_data.py)
+demo/data/full/
+paper/data/photos/
+paper/data/HS1_vision/
+paper/data/sugar_vision/
+paper/data/polenta_vision/
+*.zarr/
+*.zarr.zip
+*.unzipping/
+*.part
+
+# inputs of Figure 4 that are not public (paper/README.md)
+paper/external/
+
+# environments, and the caches of the checks
+.venv/
+venv/
+.ruff_cache/
+.pytest_cache/
+
+.DS_Store

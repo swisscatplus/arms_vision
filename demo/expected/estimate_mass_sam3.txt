@@ -1,0 +1,25 @@
+# demo/estimate_mass.py --sam3, run 2026-10-16 on Apple silicon (device mps), the masks processed as the service of the runs (ssvision.sam3_pipeline): torch 2.11.0, torchvision 0.26.0, transformers 5.18.0, facebook/sam3 revision 3c879f39826c281e95690f02c7821c4de09afae7 (local weights). A reference, not compared by the tests: SAM 3 is optional and its weights are gated.
+
+NaCl, trial 6 (run benchmark_2026-09-10-18-52.zarr, s_z = +5.0 mm), SAM 3 (local weights 3c879f39826c281e95690f02c7821c4de09afae7, union): stage 1 'scoop' 1 above 0.4 (0.865), box of the mask [0, 502, 561, 579]; stage 2 'white material on the scoop' 1 above 0.4 (0.904); IoU 0.9974 with the stored mask
+  prompts           'scoop', then 'white material on the scoop', confidence [0.4, 0.4]
+  mask pixels n_px  3894 px          stored pixel count 3894 px
+  power law (Eq. 1) m = a n_px^b, a = 2.1590e-04, b = 1.2863, R^2 = 0.974 (Table 4; fitted over the 37 NaCl scoops in data/calibration.csv)
+  vision estimate   8.96 mg
+  leave-one-out     8.97 mg (a = 2.1612e-04, b = 1.2862, fitted without this trial)
+  balance           8.80 mg carried (source vial before - after); vision - balance +0.17 mg
+
+Sugar, trial 4 (run benchmark_2026-09-10-13-46.zarr, s_z = +3.0 mm), SAM 3 (local weights 3c879f39826c281e95690f02c7821c4de09afae7, union): stage 1 'scoop' 1 above 0.4 (0.855), box of the mask [0, 506, 565, 583]; stage 2 'white material on the scoop' 1 above 0.4 (0.823); IoU 0.9950 with the stored mask
+  prompts           'scoop', then 'white material on the scoop', confidence [0.4, 0.4]
+  mask pixels n_px  4772 px          stored pixel count 4770 px
+  power law (Eq. 1) m = a n_px^b, a = 2.0605e-04, b = 1.2719, R^2 = 0.994 (Table 4; fitted over the 30 Sugar scoops in data/calibration.csv)
+  vision estimate   9.84 mg
+  leave-one-out     9.83 mg (a = 2.0594e-04, b = 1.2719, fitted without this trial)
+  balance           9.92 mg carried (source vial before - after); vision - balance -0.08 mg
+
+Polenta, trial 40 (run benchmark_2026-09-11-09-08.zarr, s_z = +3.0 mm), SAM 3 (local weights 3c879f39826c281e95690f02c7821c4de09afae7, union): stage 1 'scoop' 1 above 0.4 (0.874), box of the mask [0, 510, 571, 587]; stage 2 'yellow material on the scoop' 1 above 0.4 (0.876); IoU 0.9857 with the stored mask
+  prompts           'scoop', then 'yellow material on the scoop', confidence [0.4, 0.4]
+  mask pixels n_px  4679 px          stored pixel count 4656 px
+  power law (Eq. 1) m = a n_px^b, a = 8.7772e-05, b = 1.3571, R^2 = 0.990 (Table 4; fitted over the 33 Polenta scoops in data/calibration.csv)
+  vision estimate   8.40 mg
+  leave-one-out     8.37 mg (a = 8.7438e-05, b = 1.3571, fitted without this trial)
+  balance           9.45 mg carried (source vial before - after); vision - balance -1.05 mg

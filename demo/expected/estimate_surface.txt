@@ -1,0 +1,27 @@
+
+NaCl, trial 6 (run benchmark_2026-09-10-18-52.zarr, s_z = +5.0 mm), stored SAM 3 mask (247572 px)
+  scale             57.0 mm between the reference pixels (1649, 311) and (448, 600): 0.046143 mm/px; inlier band +-0.75 mm = +-16.25 px
+  upper boundary    40 of 40 bins kept; RANSAC inliers 32 of 40
+  surface point p   (960.146, 476.761) px     stored (960.146, 476.761) px
+  depth below lip   -32.69333 mm        stored -32.69333 mm    difference +1.8e-06 mm
+  tilt about x_lip  -45.08387 deg       stored -45.08387 deg   difference +6.6e-07 deg
+  height above the vial floor (54.0 mm below the lip, as in Figure 7): 21.31 mm
+  -> reproduces the stored estimate to float32 rounding
+
+Sugar, trial 4 (run benchmark_2026-09-10-13-46.zarr, s_z = +3.0 mm), stored SAM 3 mask (255986 px)
+  scale             57.0 mm between the reference pixels (1649, 311) and (448, 600): 0.046143 mm/px; inlier band +-0.75 mm = +-16.25 px
+  upper boundary    40 of 40 bins kept; RANSAC inliers 30 of 40
+  surface point p   (915.061, 487.610) px     stored (915.061, 487.610) px
+  depth below lip   -34.83309 mm        stored -34.83309 mm    difference +1.5e-06 mm
+  tilt about x_lip  -41.07670 deg       stored -41.07670 deg   difference -1.1e-06 deg
+  height above the vial floor (54.0 mm below the lip, as in Figure 7): 19.17 mm
+  -> reproduces the stored estimate to float32 rounding
+
+Polenta, trial 40 (run benchmark_2026-09-11-09-08.zarr, s_z = +3.0 mm), stored SAM 3 mask (241516 px)
+  scale             57.0 mm between the reference pixels (1649, 311) and (448, 600): 0.046143 mm/px; inlier band +-0.75 mm = +-16.25 px
+  upper boundary    40 of 40 bins kept; RANSAC inliers 26 of 40
+  surface point p   (905.222, 489.977) px     stored (905.222, 489.977) px
+  depth below lip   -35.30005 mm        stored -35.30005 mm    difference -3.1e-07 mm
+  tilt about x_lip  -36.19526 deg       stored -36.19526 deg   difference +7.2e-07 deg
+  height above the vial floor (54.0 mm below the lip, as in Figure 7): 18.70 mm
+  -> reproduces the stored estimate to float32 rounding

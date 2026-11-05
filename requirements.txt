@@ -1,0 +1,23 @@
+# Python 3.10 (tested with 3.10.19). Pinned to the environment the paper's numbers were computed in.
+# Enough for the demo, paper/reproduce.py (every number and table, and the figures it draws) and the run logs.
+# Then install the package itself: pip install -e .
+# Optional, not listed here: SAM 3 for the --sam3 options (pip install -e ".[sam3]", see README.md), and the
+# environment of Figure 4 (paper/README.md).
+numpy==2.2.2
+scipy==1.15.1
+matplotlib==3.10.0
+zarr==2.18.3
+opencv-python==4.13.0.92
+pillow==11.1.0
+# dependencies of the above, pinned as installed
+asciitree==0.3.3
+contourpy==1.3.1
+cycler==0.12.1
+fasteners==0.20
+fonttools==4.55.8
+kiwisolver==1.4.8
+numcodecs==0.13.1
+packaging==24.2
+pyparsing==3.2.1
+python-dateutil==2.9.0.post0
+six==1.17.0

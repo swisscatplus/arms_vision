@@ -1,0 +1,71 @@
+stage,material,prompt,min_score_material,max_score_material,max_score_empty,margin,n_material_frames,n_empty_frames,empty_control_valid,detected,r2,a,b,mape,verdict,notes
+stage0_tool,NaCl,scoop,,0.86,,,1,0,n/a,,,,,,,single-frame probe on 20260909-191508-159
+stage0_tool,NaCl,transparent spatula,,0.70,,,1,0,n/a,,,,,,,single-frame probe on 20260909-191508-159
+stage0_tool,NaCl,pipette,,0.22,,,1,0,n/a,,,,,,,single-frame probe on 20260909-191508-159
+stage0_tool,NaCl,spatula with powder,,0.19,,,1,0,n/a,,,,,,,single-frame probe on 20260909-191508-159
+stage0_tool,NaCl,metal spatula,,0.11,,,1,0,n/a,,,,,,,single-frame probe on 20260909-191508-159
+stage0_tool,NaCl,glass rod,,0.02,,,1,0,n/a,,,,,,,single-frame probe on 20260909-191508-159
+stage0_tool,NaCl,glass spatula,,0.02,,,1,0,n/a,,,,,,,single-frame probe on 20260909-191508-159
+stage0_tool,NaCl,spatula,,0.01,,,1,0,n/a,,,,,,,single-frame probe on 20260909-191508-159
+stage0_tool,NaCl,lab spatula,,0.01,,,1,0,n/a,,,,,,,single-frame probe on 20260909-191508-159
+stage0_tool,NaCl,scoop,0.61,0.88,0.21,0.40,101,60,yes,,,,,,RECOMMENDED,"161-frame sweep; any threshold 0.25-0.6 gives 101/101, 0 false positives"
+stage0_tool,NaCl,metal spatula,0.05,0.50,0.12,-0.07,101,60,yes,,,,,,NOT SEPARABLE,ranges overlap; at thr 0.10 gives 88/101 with 1 false positive
+stage1_material,NaCl,white material on the scoop,0.83,0.92,0.08,0.75,7,2,yes,,,,,,,"scores from JPEG-compressed crops - PESSIMISTIC, rank-only"
+stage1_material,NaCl,white powder,0.70,0.94,0.04,0.66,7,2,yes,,,,,,,"scores from JPEG-compressed crops - PESSIMISTIC, rank-only"
+stage1_material,NaCl,white granules,0.62,0.95,0.01,0.61,7,2,yes,,,,,,,"scores from JPEG-compressed crops - PESSIMISTIC, rank-only"
+stage1_material,NaCl,powder,0.15,0.83,0.01,0.14,7,2,yes,,,,,,,"scores from JPEG-compressed crops - PESSIMISTIC, rank-only"
+stage1_material,NaCl,salt,0.10,0.68,0.03,0.07,7,2,yes,,,,,,,"scores from JPEG-compressed crops - PESSIMISTIC, rank-only"
+stage1_material,NaCl,crystals on the spatula,0.04,0.80,0.02,0.02,7,2,yes,,,,,,,"scores from JPEG-compressed crops - PESSIMISTIC, rank-only"
+stage1_material,NaCl,powder on the spatula,0.01,0.74,0.00,0.01,7,2,yes,,,,,,,"scores from JPEG-compressed crops - PESSIMISTIC, rank-only"
+stage1_material,NaCl,white material on the scoop,,,,,36,,yes,36/36,0.9828,7.40878e-05,1.400,12.9,validated,"full re-segmentation from lossless zarr, balance-mass fit"
+stage1_material,NaCl,bubbles,,,,,36,,yes,36/36,0.9818,7.01049e-05,1.404,13.0,validated - equivalent,"full re-segmentation from lossless zarr, balance-mass fit"
+stage1_material,NaCl,crystals on the spatula,,,,,36,,yes,31/36,0.9883,6.00000e-05,1.415,12.9,ORIGINAL CONFIG - 5 reads lost,"full re-segmentation from lossless zarr, balance-mass fit"
+stage1_material,glass_beads,bubbles,0.55,0.70,0.21,0.34,3,4,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,glass_beads,speckled texture,0.51,0.76,0.81,-0.30,3,4,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,glass_beads,grainy texture,0.40,0.54,0.61,-0.21,3,4,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,glass_beads,beads,0.09,0.53,0.02,0.07,3,4,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,glass_beads,white material on the scoop,0.06,0.10,0.09,-0.03,3,4,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,glass_beads,cluster of tiny balls,0.04,0.30,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,glitter,0.04,0.16,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,frost,0.03,0.25,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,caviar,0.03,0.10,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,white powder,0.03,0.08,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,material on the scoop,0.02,0.10,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,sugar,0.02,0.09,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,residue on the scoop,0.02,0.15,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,beads on the scoop,0.01,0.01,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,granules on the scoop,0.01,0.01,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,foam,0.01,0.09,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,microbeads,0.01,0.02,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,salt,0.01,0.03,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,glass beads,0.00,0.04,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,glass microspheres,0.00,0.01,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,tiny glass spheres,0.00,0.00,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,sand,0.00,0.00,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,powder on the scoop,0.00,0.00,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,small spheres,0.00,0.02,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,seed beads,0.00,0.00,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,particles,0.00,0.01,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,granular material,0.00,0.00,,,3,0,NOT TESTED - original obs0 control was blade-out-of-frame,,,,,,,lossless frames from zarr
+stage1_material,glass_beads,bubbles,,,,,14,4,yes (obs4),6/6 real reads,0.9999,3.0460e-04,1.234,,RECOMMENDED (see caveat),0 px on 4 real empty blades at thr 0.30; r2 UNRELIABLE - only 3 distinct masses
+stage1_material,glass_beads,speckled texture,,,,,14,4,yes (obs4),14/14,0.2831,3.6670e+16,-3.527,,REJECT - segments the blade,~35000 px on a null scoop; scores 0.78-0.81 on real empty blades
+stage1_material,glass_beads,grainy texture,,,,,14,4,yes (obs4),14/14,0.3509,4.7860e+05,-1.169,,REJECT - segments the blade,fewer pixels at 46 mg than at 2 mg; 0.57-0.61 on real empty blades
+stage1_material,polenta,yellow material on the scoop,0.57,0.80,0.05,0.52,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,material on the scoop,0.28,0.64,0.02,0.26,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,yellow crumbs,0.27,0.92,0.06,0.21,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,white material on the scoop,0.17,0.64,0.09,0.08,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,cornmeal,0.07,0.51,0.00,0.07,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,yellow powder,0.07,0.15,0.04,0.03,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,polenta,0.03,0.30,0.00,0.03,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,semolina,0.01,0.05,0.00,0.01,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,yellow granules,0.01,0.03,0.01,0.00,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,couscous,0.00,0.01,0.00,0.00,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,granular material,0.00,0.00,0.00,0.00,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,breadcrumbs,0.00,0.03,0.00,0.00,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,powder,0.01,0.04,0.02,-0.01,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,bubbles,0.19,0.32,0.41,-0.22,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,speckled texture,0.54,0.80,0.81,-0.27,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,crumbs,0.04,0.27,0.48,-0.44,4,2,yes (obs4),,,,,,,lossless frames from zarr
+stage1_material,polenta,yellow material on the scoop,,,,,16,9,yes (obs4),16/16,0.9811,5.9494e-05,1.397,11.2,RECOMMENDED,full re-segmentation from lossless zarr; 0 false positives on empty blades
+stage1_material,polenta,yellow crumbs,,,,,16,9,yes (obs4),15/16,0.9783,5.1834e-05,1.409,11.8,runner-up,full re-segmentation from lossless zarr; 0 false positives on empty blades
+stage1_material,polenta,material on the scoop,,,,,16,9,yes (obs4),15/16,0.9599,2.6476e-05,1.480,14.2,runner-up,full re-segmentation from lossless zarr; 0 false positives on empty blades

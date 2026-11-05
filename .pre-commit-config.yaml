@@ -1,0 +1,19 @@
+# Checks before each commit: pip install pre-commit, then pre-commit install. CI runs them on every push
+# (pre-commit run --all-files). The data and the expected outputs stay as the scripts wrote them, because the tests
+# compare them with what the scripts print, and the licence text of sam3_ros2 stays identical to the original.
+exclude: ^(demo/data|demo/expected|paper/data|paper/expected)/|^ssvision/LICENSE-sam3_ros2\.txt$
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]          # docs/demo.png is 0.8 MB
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.3
+    hooks:
+      - id: ruff-check                  # rules in pyproject.toml, [tool.ruff.lint]
